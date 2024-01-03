@@ -115,6 +115,8 @@ var today = new Date();
 var hour = zeros(twelveHour(today.getHours()));
 var minutes = zeros(today.getMinutes());
 var seconds = zeros(today.getSeconds());
+var birthday = new Date('Jan 03 2024');
+
 if(today.getHours() >=12){
     seconds+=" pm"
 }
@@ -128,6 +130,8 @@ hrs = today.getHours();
         greet = '✨ Have a wonderful afternoon! ';
     else if (hrs >= 17 && hrs <= 24)
         greet = '🌆 Good evening, my sweetheart! ';
+    else if (birthday)
+        greet = '🎊 Happy Birthday Ala! ';
 // console.log(today.toLocaleTimeString());
 document.getElementById('greet').innerHTML = greet;
 document.getElementById('hour').innerHTML = hour;
